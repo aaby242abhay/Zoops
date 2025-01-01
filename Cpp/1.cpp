@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-class Person{
+class person{
     char name[20];
     int id;
     public:
@@ -11,7 +11,7 @@ class Person{
 };
 
 int main(){
-    Person p1;
+    person p1;
     p1.getDetails();
     return 0;
 }
