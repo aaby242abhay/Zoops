@@ -19,7 +19,7 @@ class abc{
         friend void max(xyz, abc);
 };
 
-void max(xyz t1, abc t2){
+void max(xyz t1, abc t2){       //this friend function can access the private members of the both the classes and can hence acts as a bridge between the two classes
     if(t1.x > t2.y){
         cout << t1.x << " is greater than " << t2.y << endl;
     }else{
