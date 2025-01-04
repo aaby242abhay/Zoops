@@ -5,18 +5,19 @@ class Test
 {
 private:
   int x;
+  int y;
 public:
-  Test(int x = 0) { this->x = x; }
-  void change(Test *t) { this->x = t->x; }
-  void print() { cout << "x = " << x << endl; }
+  Test(int x = 0, int y = 0) { this->x = x; this->y = y; }
+  void setX(int a) { x = a; }
+  void setY(int b) { y = b; }
+  void destroy()  { delete this; }
+  void print() { cout << "x = " << x << " y = " << y << endl; }
 };
 
 int main()
 {
-  Test obj(5);
-  Test *ptr = new Test (10);
-  obj.change(ptr);
-  obj.print();
-  delete ptr;
+  Test *obj = new Test(3,4);
+  obj->destroy();
+  obj->print();
   return 0;
 }

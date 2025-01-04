@@ -10,12 +10,12 @@ class Test{
         this->y = y;
     }
     Test setX(int a){
-        cout << "setX" << endl;
+        cout << "setX ----> " << this << endl;
         x = a;
         return *this;
     }
     Test setY(int b){
-        cout << "setY" << endl;
+        cout << "setY ----> " << this << endl;
         y = b;
         return *this;
     }
